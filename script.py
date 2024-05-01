@@ -1,5 +1,5 @@
 try:
-	url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Lahore?unitGroup=us&key=6Q9WSZLNNDM8QZT4WXZBTJ26G&contentType=json"
+	url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{}?unitGroup=us&key={}&contentType=json"
 	res = system.net.httpGet(url)
 	jres =  system.util.jsonDecode(res)
 	system.tag.writeBlocking(["[default]/Weather-Tags/queryCost"], [jres['queryCost']])
